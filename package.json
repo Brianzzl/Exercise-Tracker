@@ -1,0 +1,34 @@
+{
+  "name": "exercise-traker",
+  "version": "1.0.0",
+  "description": "execiser tracker build with mern stack",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client ",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brianzzl/Exercise-Tracker.git"
+  },
+  "author": "Brian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brianzzl/Exercise-Tracker/issues"
+  },
+  "homepage": "https://github.com/Brianzzl/Exercise-Tracker#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "config": "^3.2.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
